@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  LOOPS WITHIN LOOPS in PRINTING-TO-CONSOLE problems.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Colleen.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -75,7 +75,7 @@ def shape(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     ####################################################################
@@ -87,7 +87,24 @@ def shape(r):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:  15 minutes.
     # ------------------------------------------------------------------
+    # cant reuse k in an interior loop
+    # Make table representing k and q relationship
+    # Keep in mind the rows and co., top corner is starting value
+    # loops within loops practice
 
+    for k in range(r):
+        for q in range(k):
+            print('0', end='')
+        for q in range(r-k):
+            print('+', end='')
+        print('!', end='')
+        for q in range(r-k):
+            print(r-k-q, end='')
+        print(' ', end='')
+        for q in range(k+1):
+            print(3+q, end='')
+
+        print()
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
