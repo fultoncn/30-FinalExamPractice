@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  SEQUENCES.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Colleen.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -134,13 +134,21 @@ def practice_problem4a(sequence):
       :type sequence: list | tuple | string
     """
     ####################################################################
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 minutes.
     ####################################################################
+    new_sequence = []
+    for k in range(len(sequence)):
+        number_value = sequence[k]
+        if number_value == sequence[k-1]:
+            new_sequence = new_sequence + [k-1]
+        if new_sequence == [-1]:
+            new_sequence = []
+    return new_sequence
 
 
 def run_test_practice_problem4b():
@@ -197,13 +205,29 @@ def practice_problem4b(sequence):
       :type sequence: (list | tuple) of (float | int)
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
+    new_sequence = []
+    for k in range(len(sequence)):
+        number = sequence[k]
+        if number % 2 == 0:
+            new_sequence = new_sequence + [number]
+    print('New sequence', new_sequence)
+    largest_number = new_sequence[0]
+    for q in range(len(new_sequence)):
+        new_number = new_sequence[k]
+        print('new number', new_number)
+        if new_number >= largest_number:
+            largest_number = [new_number]
+            print(largest_number)
+    return largest_number
 
 
 def run_test_practice_problem4c():
